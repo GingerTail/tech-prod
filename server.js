@@ -25,9 +25,9 @@ server.use("/users", UserRouter)
 
 
 
-server.listen(3450, ()=>{
+server.listen(server.get("port"), ()=>{
     console.log("SERVER IS RUNNING")
 })
-server.get(server.get("port"), (req, res) => {
+server.get("/", (req, res) => {
     res.send("Hello")
   })
