@@ -16,6 +16,8 @@ connection.then(db =>{
 err=>{console.log(err)}
 )
 var server = express();
+
+server.set("port", process.env.PORT || 4000)
 server.use(cors())
 server.use(express.json())
 
